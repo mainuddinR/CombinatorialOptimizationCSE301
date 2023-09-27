@@ -140,7 +140,7 @@ int main()
     int s=0;
     if(BellmanFord(s))
     {
-        cout<<"final length hello world"<<endl;
+        cout<<"Bellman Ford final length"<<endl;
         for(int i=0; i<n; i++)
         {
             cout<<d[i]<<" ";
