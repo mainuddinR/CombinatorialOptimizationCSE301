@@ -36,7 +36,7 @@ void Relax(int u,int v)
     return index;
 }
 */
-void Dijkstra(int s)
+/*void Dijkstra(int s)
 {
     //int queueSize=n;
 
@@ -51,17 +51,22 @@ void Dijkstra(int s)
         }
     }
 
-}
+}*/
 bool BellmanFord(int s)
 {
     Initialize(s);
-    int k=0;
     int itr=n-1;
     while(itr--)
     {
-        if(k<n){
-        Dijkstra(k);
-        k++;
+        for(int u=0; u<n; u++)
+        {
+            for(int v=0; v<n; v++)
+            {
+                if(w[u][v]!=0)
+                {
+                    Relax(u,v);
+                }
+            }
         }
     }
     for(int i=0; i<n; i++)
